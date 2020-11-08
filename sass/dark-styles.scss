@@ -1,0 +1,788 @@
+/**
+ * GENERAL STYLES DARK O NIGHT THEME VERSION
+ * -------------------------------------------------------------------
+ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Chakra Petch', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #110038;
+}
+
+.main {
+    margin: 50px auto;
+    max-width: 1200px;
+    width: auto;
+}
+
+.top-header {
+    background-image: linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
+    box-shadow: 0 1px 0 0 #110038;
+    height: 23px;
+    h5 {
+        font-size: 1em;
+        padding: 0 8px;
+        color: #ffffff;
+        font-weight: lighter;
+    }
+}
+
+button,
+input {
+    outline: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+
+/**
+ * 01. HEADER
+ * -------------------------------------------------------------------
+ */
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &__logo {
+        height: 64px;
+        width: 102.6px;
+        cursor: pointer;
+        & figure {
+            display: flex;
+            align-items: center;
+            & .arrowBack {
+                margin-right: 10px;
+            }
+        }
+    }
+    & .noCursorP {
+        cursor: initial;
+    }
+    &__buttons {
+        display: flex;
+        align-items: center;
+        &-dropmenu {
+            display: none;
+            background: #E6E6E6;
+            box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+            width: 170px;
+            position: absolute;
+            right: 210px;
+            & button {
+                width: 150px;
+                height: 36px;
+                margin: 0 10px;
+            }
+            & .light {
+                margin: 10px 10px 5px 10px;
+                color: #ffffff;
+                text-align: left;
+                padding-left: 16px;
+                & .mygif-first {
+                    text-decoration: underline;
+                }
+            }
+            & .dark {
+                margin: 5px 10px 10px 10px;
+                color: #ffffff;
+                background: #2E32FB;
+                border: 1px solid rgba(51, 53, 143, 0.20);
+                box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
+                text-align: left;
+                padding-left: 16px;
+                &:hover {
+                    background: #2629CC;
+                    border: 1px solid #4C2F99;
+                    box-shadow: inset -1px -1px 0 0 #2124B3, inset 1px 1px 0 0 #FFFFFF;
+                }
+                & .mygif-first {
+                    text-decoration: underline;
+                }
+            }
+        }
+        & button {
+            height: 36px;
+            color: #ffffff;
+            background: #EE3EFE;
+            border: 1px solid #110038;
+            box-shadow: inset -1px -1px 0 0 #A72CB3, inset 1px 1px 0 0 #FFFFFF;
+            &:hover {
+                border: 1px dotted #110038;
+                background: #CE36DB;
+            }
+        }
+        &-create {
+            width: 144px;
+            margin-right: 16px;
+        }
+        &-choice {
+            width: 131px;
+        }
+        &-down {
+            width: 36px;
+        }
+        &-mygif {
+            margin-left: 16px;
+            font-weight: lighter;
+            color: #ffffff;
+            &:hover {
+                outline: 1px dotted #FFFFFF;
+            }
+            & .mygif-first {
+                text-decoration: underline;
+            }
+            & a {
+                text-decoration: none;
+                color: #ffffff;
+            }
+        }
+    }
+}
+
+button.header__buttons-down:hover~.header__buttons-dropmenu,
+.header__buttons-dropmenu:hover {
+    display: block;
+}
+
+
+/**
+ * 02. KEYWORDS
+ * WORDS SHOWING AFTER SEARCH
+ * -------------------------------------------------------------------
+ */
+
+.keyWords {
+    &__buttons {
+        display: flex;
+        flex-wrap: wrap;
+        & .buttonWords {
+            background: #EE3EFE;
+            border: 1px solid #110038;
+            box-shadow: inset -2px -2px 0 0 #A72CB3, inset 2px 2px 0 0 #FFFFFF;
+            padding: 8px;
+            margin: 8px 8px 8px 0;
+            color: #ffffff;
+            &:hover {
+                background: #CE36DB;
+                border: 1px solid #110038;
+                box-shadow: inset -1px -1px 0 0 #A72CB3, inset 1px 1px 0 0 #FFFFFF;
+            }
+        }
+    }
+}
+
+
+/**
+ * 03. BAR SEARCH
+ *
+ * -------------------------------------------------------------------
+ */
+
+.search {
+    background: #B4B4B4;
+    box-shadow: inset -2px -2px 0 0 #8F8F8F, inset 2px 2px 0 0 #FFFFFF;
+    height: auto;
+    padding: 3px;
+    width: auto;
+    &__text {
+        background-image: linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
+        padding: 3px;
+        height: 24px;
+        ;
+        & h4 {
+            font-family: 'Chakra Petch', sans-serif;
+            font-size: 14px;
+            color: #FFFFFF;
+            letter-spacing: 0;
+        }
+    }
+    &__inputs {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        &-text {
+            max-width: 85%;
+            width: 100%;
+            height: 48px;
+            margin: 12px 8px 12px 15px;
+            background: #FFFFFF;
+            border: 1px solid #979797;
+            box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
+            padding: 13px 16px;
+        }
+        & ::placeholder {}
+        &-button {
+            height: 36px;
+            width: 102px;
+            background: #B4B4B4;
+            border: 1px solid #808080;
+            box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+            font-size: 16px;
+            color: #110038;
+            letter-spacing: 0;
+            line-height: 18px;
+            &:hover {
+                background: #CE36DB;
+                border: 1px solid #110038;
+                box-shadow: inset -1px -1px 0 0 #A72CB3, inset 1px 1px 0 0 #FFFFFF;
+            }
+        }
+    }
+}
+
+
+/**
+ * 04. BUTTONS KEY WORDS SEARH SUGESIONS
+ *
+ * -------------------------------------------------------------------
+ */
+
+.keywordSugestion__buttons {
+    & button {
+        max-width: 84.5%;
+        width: 100%;
+        height: 34px;
+        margin: 1px 8px 1px 30px;
+        background: #E6E6E6;
+        box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+        text-align: left;
+        padding: 0 20px;
+        &:hover {
+            background: #DBDBDB;
+            border: 1px dotted #808080;
+            box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+        }
+    }
+}
+
+
+/**
+ * 05. RESULTS GIFS SEARH BAR WITH KEY WORDS
+ *
+ * -------------------------------------------------------------------
+ */
+
+.results {
+    & .resultSection {
+        margin: 10px 3px;
+        & .results__button-close {
+            display: block;
+            margin: 10px;
+        }
+        & .results__cards {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        & .gif__card {
+            background-color: #E6E6E6;
+            max-width: 288px;
+            width: 100%;
+            max-height: 313px;
+            height: 100%;
+            margin-top: 10px;
+            padding: 4px;
+            box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+        }
+    }
+    button {
+        & a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+        background: #EE3EFE;
+        border: 1px solid #110038;
+        box-shadow: inset -1px -1px 0 0 #A72CB3,
+        inset 1px 1px 0 0 #FFFFFF;
+        color: #ffffff;
+        font-size: 14px;
+        height: 34px;
+        width: 81px;
+        &:hover {
+            background: #CE36DB;
+            border: 1px solid #110038;
+            box-shadow: inset -1px -1px 0 0 #A72CB3, inset 1px 1px 0 0 #FFFFFF;
+        }
+    }
+}
+
+.resultSearchBar {
+    margin: 10px 0;
+    &Section {
+        margin: 20px 0;
+        & .bar {
+            display: block;
+        }
+        & .gifResultSearch {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+    }
+    & .gifResultSearch {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    & .gif__card-canva {
+        width: 280px;
+        height: 280px;
+        &:hover {
+            border: 2px dotted black;
+        }
+    }
+}
+
+.results__button-close button {
+    background: #EE3EFE;
+    border: 1px solid #110038;
+    box-shadow: inset -1px -1px 0 0 #A72CB3, inset 1px 1px 0 0 #FFFFFF;
+    color: #ffffff;
+    font-size: 14px;
+    height: 34px;
+    width: 140px;
+    &:hover {
+        background: #CE36DB;
+        border: 1px solid #110038;
+        box-shadow: inset -1px -1px 0 0 #A72CB3, inset 1px 1px 0 0 #FFFFFF;
+    }
+}
+
+.bar {
+    &__text {
+        margin: 30px 0 16px 0;
+        &-text {
+            width: 100%;
+            height: 32px;
+            background: #FFFAFE;
+            border: 1px solid #2E32FB;
+            box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #110038;
+        }
+        & ::placeholder {
+            padding: 7px;
+            color: #110038;
+        }
+    }
+}
+
+.gif {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    &__card {
+        background-color: #E6E6E6;
+        max-width: 288px;
+        width: 100%;
+        max-height: 313px;
+        height: 100%;
+        margin-top: 10px;
+        padding: 4px;
+        box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+        &-canva {
+            & img {
+                width: 280px;
+                height: 280px;
+                &:hover {
+                    border: 2px dotted black;
+                }
+            }
+        }
+        & .canva-button button {
+            & a {
+                color: #ffffff;
+                text-decoration: none;
+            }
+            background: #2E32FB;
+            border: 1px solid #4C2F99;
+            box-shadow: inset -2px -2px 0 0 #2124B3,
+            inset 1px 1px 0 0 #FFFFFF;
+            color: #ffffff;
+            font-size: 14px;
+            height: 34px;
+            width: 81px;
+            position: relative;
+            bottom: 50px;
+            left: 11px;
+            &:hover {
+                background: #2629CC;
+                border: 1px solid #4C2F99;
+                box-shadow: inset -1px -1px 0 0 #2124B3, inset 1px 1px 0 0 #FFFFFF;
+            }
+        }
+        &-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2px;
+            padding: 0 3px;
+            background-image: linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
+            & p {
+                color: #ffffff;
+                font-size: 14px;
+                margin: 3px 0;
+            }
+        }
+    }
+}
+
+.closeXButton {
+    cursor: pointer;
+}
+
+.trends {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    & .trend {
+        background-color: #E6E6E6;
+        max-width: 288px;
+        width: 100%;
+        max-height: 290px;
+        height: 100%;
+        margin-top: 10px;
+        padding: 4px;
+        box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+        &__img img {
+            width: 280px;
+            height: 280px;
+            &:hover {
+                border: 2px dotted black;
+            }
+        }
+        &__img:hover~.trend__ht,
+        .trend__ht:hover {
+            display: block;
+        }
+        &__ht {
+            background-image: linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
+            color: #ffffff;
+            position: relative;
+            bottom: 30px;
+            margin: 0 3px;
+            &:hover~.trend__img img {
+                border: 2px dotted black;
+            }
+            & p {
+                margin: 0 5px;
+                font-size: 15px;
+            }
+        }
+    }
+}
+
+
+/**
+ * 06. FOOTER SECTION
+ *
+ * -------------------------------------------------------------------
+ */
+
+.footer {
+    background: linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
+    text-align: center;
+    color: #ffffff;
+    padding: 5px 0;
+}
+
+
+/**
+ * 07. RECORD GIF SECTION
+ *
+ * -------------------------------------------------------------------
+ */
+
+.gifVideo,
+.gifRecorded {
+    width: 100%;
+    max-width: 800px;
+    height: 100%;
+    margin: auto
+}
+
+.gifInfo {
+    background: #E6E6E6;
+    box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+    padding: 3px;
+    max-width: 680px;
+    width: 100%;
+    margin: 70px auto;
+    & .gifTitle {
+        display: flex;
+        justify-content: space-between;
+        background: linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
+        color: #ffffff;
+        padding: 4px;
+        &__word h3 {
+            font-weight: lighter;
+        }
+        & .closeMyGifos {
+            cursor: pointer;
+        }
+    }
+    & .gifSubtitle {
+        padding: 30px 25px 10px 25px;
+        display: flex;
+        & figure {
+            margin-right: 16px;
+        }
+        & p {
+            font-size: 16px;
+            color: #110038;
+            letter-spacing: 0;
+            line-height: 22px;
+            font-weight: bold;
+        }
+    }
+    & .gifInstructions {
+        margin: 0 70px;
+        & .strongWord {
+            font-style: italic;
+            color: #00001A;
+            letter-spacing: 0;
+            line-height: 20px;
+            font-weight: bold;
+        }
+        & .number {
+            color: #00001A;
+            letter-spacing: 0;
+            line-height: 20px;
+            font-weight: bold;
+        }
+        & p {
+            margin: 20px 0;
+        }
+    }
+    & .gifButtons {
+        text-align: right;
+        margin: 35px 35px;
+        & button {
+            height: 36px;
+            width: 144px;
+            color: #ffffff;
+            background: #EE3EFE;
+            border: 1px solid #110038;
+            box-shadow: inset -1px -1px 0 0 #A72CB3, inset 1px 1px 0 0 #FFFFFF;
+            &:hover {
+                border: 2px dotted black;
+                background: #CE36DB;
+                box-shadow: inset -1px -1px 0 0 #A72CB3, inset 1px 1px 0 0 #FFFFFF;
+            }
+        }
+        & .cancel {
+            background-color: #FFF4FD;
+            color: #110038;
+            &:hover {
+                background-color: #f1e1f0;
+            }
+        }
+        & .gifButtons__section {
+            display: flex;
+            justify-content: flex-end;
+            margin: 20px 0;
+            & button {
+                margin-right: 10px;
+            }
+            &-capture {
+                display: flex;
+                & .captureIcon {
+                    width: 36px;
+                    margin: 0;
+                    padding-top: 4px;
+                }
+            }
+            &-stop {
+                display: flex;
+                align-items: center;
+                & .stop {
+                    background: #FF6161;
+                    border: 1px solid #110038;
+                    box-shadow: inset -1px -1px 0 0 #993A3A, inset 1px 1px 0 0 #FFFFFF;
+                    color: #ffffff;
+                }
+                & .stopIcon {
+                    width: 36px;
+                    margin: 0;
+                    background: #FF6161;
+                    border: 1px solid #110038;
+                    box-shadow: inset -1px -1px 0 0 #993A3A, inset 1px 1px 0 0 #FFFFFF;
+                    padding-top: 4px;
+                }
+            }
+            & .copyGifLink {
+                position: absolute;
+                opacity: 0;
+            }
+            & a,
+            .downloadGif {
+                text-decoration: none;
+                background: #F7C9F3;
+                border: 1px solid #110038;
+                box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+                font-size: 14px;
+                color: #110038;
+                padding: 8px;
+                cursor: pointer;
+                &:hover {
+                    border: 2px dotted black;
+                    background: #CE36DB;
+                    box-shadow: inset -1px -1px 0 0 #A72CB3, inset 1px 1px 0 0 #FFFFFF;
+                }
+            }
+        }
+    }
+}
+
+
+/**
+ * 08. MEDIA QUERIES
+ *
+ * -------------------------------------------------------------------
+ */
+
+@media screen and(max-width: 1200px) {
+    .keywordSugestion__buttons {
+        & button {
+            margin: 1px 8px 1px 22px;
+        }
+    }
+    .main {
+        margin: 50px 50px;
+    }
+    .gif {
+        justify-content: space-around;
+    }
+    .search__inputs-button {
+        margin-right: 5px;
+    }
+    .resultSearchBarSection .gifResultSearch {
+        justify-content: space-around;
+    }
+    .gifResultSearch {
+        & .gif__card-canva {
+            margin: 10px 0;
+            & img {}
+        }
+    }
+    .results .resultSection .results__cards {
+        justify-content: space-around;
+    }
+}
+
+@media screen and(max-width: 1000px) {
+    .keywordSugestion__buttons {
+        & button {
+            margin: 1px 8px 1px 17px;
+        }
+    }
+    .search__inputs {
+        &-text {}
+    }
+}
+
+@media screen and(max-width: 675px) {
+    .keywordSugestion__buttons {
+        & button {
+            margin: 1px 8px 1px 22px;
+        }
+    }
+    .top-header {
+        & p {
+            font-size: 0.7em;
+        }
+    }
+    .header {
+        display: block;
+        text-align: center;
+        margin-bottom: 10px;
+        &__logo {
+            margin: auto;
+        }
+        &__buttons {
+            margin: auto;
+        }
+    }
+    .search__inputs {
+        display: block;
+        text-align: center;
+    }
+    .search__inputs-button {
+        margin-bottom: 10px;
+    }
+    .gif__card {
+        max-width: 220px;
+        & img {
+            width: 100%;
+        }
+    }
+    .trends {
+        & .trend {
+            margin: auto;
+        }
+    }
+}
+
+@media screen and(max-width: 540px) {
+    .top-header {
+        & p {
+            font-size: 0.7em;
+        }
+    }
+    .gif {
+        display: block;
+        &__card {
+            margin: auto;
+            max-width: 100%;
+        }
+    }
+}
+
+@media screen and(max-width: 390px) {
+    .top-header {
+        & p {
+            font-size: 0.6em;
+        }
+    }
+    .gif {
+        &__card {
+            margin: 10px 0;
+            &-canva {
+                & img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .gifResultSearch {
+        & .gif__card-canva {
+            margin: 10px 0;
+            & img {}
+        }
+    }
+    .trends {
+        & .trend {
+            &__img {
+                height: auto;
+                & img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

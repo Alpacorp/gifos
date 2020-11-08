@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/gifOF_logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="sass/styles.css" id="stylesRoute">
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;700&display=swap" rel="stylesheet">
+    <title>Gifos | Crear mis Gifos</title>
+</head>
+
+<body>
+    <section class="top-header" id="top-header">
+        <h5>¡Bienvenidos/as a Guifos.com! ----- Donde los gifs están. ///// Número de visitas: <span class="sesions" id="sesions"></span></h5>
+    </section>
+    <section class="main">
+        <h4 class="hide">.</h4>
+        <section class="header">
+            <div class="header__logo">
+                <figure>
+                    <img onclick="location.href='index.html'" src="assets/arrow.svg" alt="back" class="arrowBack">
+                    <img src="assets/gifOF_logo.png" alt="gifos logo" class="gifos-logo noCursorP" id="gifos-logo">
+                </figure>
+            </div>
+            <div class="header__buttons">
+                <button class="header__buttons-create" onclick="location.href='gifos.html'">Crear Guifos</button>
+                <button class="header__buttons-choice">Elegir tema</button>
+                <div>
+                    <button class="header__buttons-down"><img src="assets/dropdown.svg" alt="down"></button>
+                    <div class="header__buttons-dropmenu">
+                        <div>
+                            <button class="light" id="light"><span class="mygif-first">S</span>ailor Day</button>
+                        </div>
+                        <div>
+                            <button class="dark" id="dark"><span class="mygif-first">S</span>ailor Night</button>
+                        </div>
+                    </div>
+                </div>
+                <h4 class="header__buttons-mygif"><a href="misgifos.html"><span class="mygif-first">M</span>is Guifos</a></h4>
+            </div>
+        </section>
+        <section class="gifInfo" id="gifInfo">
+            <h4 class="hide">.</h4>
+            <section class="gifDescription" id="gifDescription">
+                <div class="gifTitle">
+                    <div class="gifTitle__word">
+                        <h3 class="textCreate" id="textCreate">Crear Gifos</h3>
+                        <h3 class="textCheck" id="textCheck">Un chequeo antes de empezar</h3>
+                    </div>
+                    <figure>
+                        <img src="assets/close.svg" class="closeMyGifos" id="closeMyGifos" alt="close">
+                    </figure>
+                </div>
+                <section class="gifContent" id="gifContent">
+                    <div class="gifSubtitle">
+                        <figure>
+                            <img src="assets/window_img.png" alt="widonw">
+                        </figure>
+                        <h3>Aquí podrás crear tus propios guifos</h3>
+                    </div>
+                    <div class="gifInstructions">
+                        <p>Crear tu <span class="strongWord">guifo</span> es muy fácil, graba cualquier imagen con tu cámara y obtén guifos personalizados. Los pasos a seguir para crear tu guifo son:</p>
+
+                        <p><span class="number">1]</span> Dar permisos de acceso a la cámara [sólo por el tiempo de uso]</p>
+                        <p><span class="number">2]</span> Capturar tu momento <span class="strongWord">guifo</span></p>
+                        <p><span class="number">3]</span> Revisar el momento</p>
+                        <p><span class="number">4]</span> Listo para subir y compartir</p>
+
+                        <p>¿Quieres comenzar a crear tu <span class="strongWord">guifo</span> ahora?</p>
+                    </div>
+                </section>
+            </section>
+            <section class="gifButtons" id="gifButtons">
+                <h4 class="hide">.</h4>
+                <div>
+                    <div>
+                        <video src="/" class="gifVideo" id="gifVideo" autoplay></video>
+                        <img src="/" alt="" class="gifRecorded" id="gifRecorded">
+                    </div>
+                    <div class="gifButtons__section">
+                        <button class="cancel" id="cancel" onclick="location.href='file:///Volumes/ALPAAR/Proy.%20Ind./Alejandro%20Capacitacio%CC%81n/Acamica/Proyectos%20Gif.os/index.html#top-header'">Cancelar</button>
+                        <button class="start" id="start">Comenzar</button>
+                        <div class="gifButtons__section-capture" id="gifButtons__section-capture">
+                            <button class="captureIcon" id="captureIcon"><img src="assets/camera.svg" alt="camera"></button>
+                            <button class="capture" id="capture">Capturar</button>
+                        </div>
+                        <!-- <button id="repeatCapture">Repetir Captura</button> -->
+                        <div class="gifButtons__section-stop" id="gifButtons__section-stop">
+                            <button class="stopIcon" id="stopIcon"><img src="assets/recording_dark.svg" alt="record"></button>
+                            <button class="stop" id="stop">Detener Grabación</button>
+                        </div>
+                        <button class="uploadGif" id="uploadGif">Subir Gifo</button>
+                        <button class="copyGif" id="copyGif">Copiar Enlace Guifo</button>
+                        <input type="text" class="copyGifLink" id="copyGifLink" value="hola">
+                        <a href="" target="_blank" class="downloadGif" id="downloadGif">Descargar Guifo</a>
+                        <p class="loadingGif" id="loadingGif">Cargando ...</p>
+                        <!-- <button id="closeMyGifos">Cerrar</button> -->
+                    </div>
+                </div>
+            </section>
+        </section>
+        <section class="bar">
+            <h4 class="hide">.</h4>
+            <div class="bar__text">
+                <input class="bar__text-text" type="text" placeholder="Mis Guifos" readonly>
+            </div>
+        </section>
+        <section class="resultSearchBarSection" id="resultSearchBarSection">
+            <h4 class="hide">.</h4>
+            <div class="gifResultSearch" id="gifResultSearch">
+            </div>
+        </section>
+    </section>
+    <footer class="footer" id="footer">
+        <p>Todos los derechos reservados | 2020</p>
+    </footer>
+    <script src="main.js"></script>
+    <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
+    <script src="gifos.js"></script>
+</body>
+
+</html>

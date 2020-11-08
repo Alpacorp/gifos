@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/gifOF_logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="sass/styles.css" id="stylesRoute">
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;700&display=swap" rel="stylesheet">
+    <title>Gifos | Ver mis Gifos</title>
+</head>
+
+<body>
+    <section class="top-header" id="top-header">
+        <h5>¡Bienvenidos/as a Guifos.com! ----- Donde los gifs están. ///// Número de visitas: <span class="sesions" id="sesions"></span></h5>
+    </section>
+    <section class="main">
+        <h4 class="hide">.</h4>
+        <section class="header">
+            <div class="header__logo">
+                <figure onclick="location.href='index.html'">
+                    <img src="assets/gifOF_logo.png" alt="gifos logo" class="gifos-logo" id="gifos-logo">
+                </figure>
+            </div>
+            <div class="header__buttons">
+                <button class="header__buttons-create" onclick="location.href='gifos.html'">Crear Guifos</button>
+                <button class="header__buttons-choice">Elegir tema</button>
+                <div>
+                    <button class="header__buttons-down"><img src="assets/dropdown.svg" alt="down"></button>
+                    <div class="header__buttons-dropmenu">
+                        <div>
+                            <button class="light" id="light"><span class="mygif-first">S</span>ailor Day</button>
+                        </div>
+                        <div>
+                            <button class="dark" id="dark"><span class="mygif-first">S</span>ailor Night</button>
+                        </div>
+                    </div>
+                </div>
+                <h4 class="header__buttons-mygif"><a href="misgifos.html"><span class="mygif-first">M</span>is Guifos</a></h4>
+            </div>
+        </section>
+        <section class="bar">
+            <h4 class="hide">.</h4>
+            <div class="bar__text">
+                <input class="bar__text-text" type="text" placeholder="Mis Guifos" readonly>
+            </div>
+        </section>
+        <section class="resultSearchBarSection" id="resultSearchBarSection">
+            <h4 class="hide">.</h4>
+            <div class="gifResultSearch" id="gifResultSearch">
+            </div>
+        </section>
+    </section>
+    <footer class="footer">
+        <p>Todos los derechos reservados | 2020</p>
+    </footer>
+    <script src="main.js"></script>
+    <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
+    <script src="misgifos.js"></script>
+</body>
+
+</html>

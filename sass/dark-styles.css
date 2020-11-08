@@ -1,0 +1,938 @@
+/**
+ * GENERAL STYLES DARK O NIGHT THEME VERSION
+ * -------------------------------------------------------------------
+ */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Chakra Petch', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #110038;
+}
+
+.main {
+  margin: 50px auto;
+  max-width: 1200px;
+  width: auto;
+}
+
+.top-header {
+  background-image: -webkit-gradient(linear, right top, left top, from(#EE3EFE), to(#2E32FB));
+  background-image: linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
+  -webkit-box-shadow: 0 1px 0 0 #110038;
+          box-shadow: 0 1px 0 0 #110038;
+  height: 23px;
+}
+
+.top-header h5 {
+  font-size: 1em;
+  padding: 0 8px;
+  color: #ffffff;
+  font-weight: lighter;
+}
+
+button,
+input {
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+/**
+ * 01. HEADER
+ * -------------------------------------------------------------------
+ */
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header__logo {
+  height: 64px;
+  width: 102.6px;
+  cursor: pointer;
+}
+
+.header__logo figure {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__logo figure .arrowBack {
+  margin-right: 10px;
+}
+
+.header .noCursorP {
+  cursor: initial;
+}
+
+.header__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__buttons-dropmenu {
+  display: none;
+  background: #E6E6E6;
+  -webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+          box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+  width: 170px;
+  position: absolute;
+  right: 210px;
+}
+
+.header__buttons-dropmenu button {
+  width: 150px;
+  height: 36px;
+  margin: 0 10px;
+}
+
+.header__buttons-dropmenu .light {
+  margin: 10px 10px 5px 10px;
+  color: #ffffff;
+  text-align: left;
+  padding-left: 16px;
+}
+
+.header__buttons-dropmenu .light .mygif-first {
+  text-decoration: underline;
+}
+
+.header__buttons-dropmenu .dark {
+  margin: 5px 10px 10px 10px;
+  color: #ffffff;
+  background: #2E32FB;
+  border: 1px solid rgba(51, 53, 143, 0.2);
+  -webkit-box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
+  text-align: left;
+  padding-left: 16px;
+}
+
+.header__buttons-dropmenu .dark:hover {
+  background: #2629CC;
+  border: 1px solid #4C2F99;
+  -webkit-box-shadow: inset -1px -1px 0 0 #2124B3, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #2124B3, inset 1px 1px 0 0 #FFFFFF;
+}
+
+.header__buttons-dropmenu .dark .mygif-first {
+  text-decoration: underline;
+}
+
+.header__buttons button {
+  height: 36px;
+  color: #ffffff;
+  background: #EE3EFE;
+  border: 1px solid #110038;
+  -webkit-box-shadow: inset -1px -1px 0 0 #A72CB3, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #A72CB3, inset 1px 1px 0 0 #FFFFFF;
+}
+
+.header__buttons button:hover {
+  border: 1px dotted #110038;
+  background: #CE36DB;
+}
+
+.header__buttons-create {
+  width: 144px;
+  margin-right: 16px;
+}
+
+.header__buttons-choice {
+  width: 131px;
+}
+
+.header__buttons-down {
+  width: 36px;
+}
+
+.header__buttons-mygif {
+  margin-left: 16px;
+  font-weight: lighter;
+  color: #ffffff;
+}
+
+.header__buttons-mygif:hover {
+  outline: 1px dotted #FFFFFF;
+}
+
+.header__buttons-mygif .mygif-first {
+  text-decoration: underline;
+}
+
+.header__buttons-mygif a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+button.header__buttons-down:hover ~ .header__buttons-dropmenu,
+.header__buttons-dropmenu:hover {
+  display: block;
+}
+
+/**
+ * 02. KEYWORDS
+ * WORDS SHOWING AFTER SEARCH
+ * -------------------------------------------------------------------
+ */
+.keyWords__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.keyWords__buttons .buttonWords {
+  background: #EE3EFE;
+  border: 1px solid #110038;
+  -webkit-box-shadow: inset -2px -2px 0 0 #A72CB3, inset 2px 2px 0 0 #FFFFFF;
+          box-shadow: inset -2px -2px 0 0 #A72CB3, inset 2px 2px 0 0 #FFFFFF;
+  padding: 8px;
+  margin: 8px 8px 8px 0;
+  color: #ffffff;
+}
+
+.keyWords__buttons .buttonWords:hover {
+  background: #CE36DB;
+  border: 1px solid #110038;
+  -webkit-box-shadow: inset -1px -1px 0 0 #A72CB3, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #A72CB3, inset 1px 1px 0 0 #FFFFFF;
+}
+
+/**
+ * 03. BAR SEARCH
+ *
+ * -------------------------------------------------------------------
+ */
+.search {
+  background: #B4B4B4;
+  -webkit-box-shadow: inset -2px -2px 0 0 #8F8F8F, inset 2px 2px 0 0 #FFFFFF;
+          box-shadow: inset -2px -2px 0 0 #8F8F8F, inset 2px 2px 0 0 #FFFFFF;
+  height: auto;
+  padding: 3px;
+  width: auto;
+}
+
+.search__text {
+  background-image: -webkit-gradient(linear, right top, left top, from(#EE3EFE), to(#2E32FB));
+  background-image: linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
+  padding: 3px;
+  height: 24px;
+}
+
+.search__text h4 {
+  font-family: 'Chakra Petch', sans-serif;
+  font-size: 14px;
+  color: #FFFFFF;
+  letter-spacing: 0;
+}
+
+.search__inputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.search__inputs-text {
+  max-width: 85%;
+  width: 100%;
+  height: 48px;
+  margin: 12px 8px 12px 15px;
+  background: #FFFFFF;
+  border: 1px solid #979797;
+  -webkit-box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
+          box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
+  padding: 13px 16px;
+}
+
+.search__inputs-button {
+  height: 36px;
+  width: 102px;
+  background: #B4B4B4;
+  border: 1px solid #808080;
+  -webkit-box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+  font-size: 16px;
+  color: #110038;
+  letter-spacing: 0;
+  line-height: 18px;
+}
+
+.search__inputs-button:hover {
+  background: #CE36DB;
+  border: 1px solid #110038;
+  -webkit-box-shadow: inset -1px -1px 0 0 #A72CB3, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #A72CB3, inset 1px 1px 0 0 #FFFFFF;
+}
+
+/**
+ * 04. BUTTONS KEY WORDS SEARH SUGESIONS
+ *
+ * -------------------------------------------------------------------
+ */
+.keywordSugestion__buttons button {
+  max-width: 84.5%;
+  width: 100%;
+  height: 34px;
+  margin: 1px 8px 1px 30px;
+  background: #E6E6E6;
+  -webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+          box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+  text-align: left;
+  padding: 0 20px;
+}
+
+.keywordSugestion__buttons button:hover {
+  background: #DBDBDB;
+  border: 1px dotted #808080;
+  -webkit-box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+}
+
+/**
+ * 05. RESULTS GIFS SEARH BAR WITH KEY WORDS
+ *
+ * -------------------------------------------------------------------
+ */
+.results .resultSection {
+  margin: 10px 3px;
+}
+
+.results .resultSection .results__button-close {
+  display: block;
+  margin: 10px;
+}
+
+.results .resultSection .results__cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.results .resultSection .gif__card {
+  background-color: #E6E6E6;
+  max-width: 288px;
+  width: 100%;
+  max-height: 313px;
+  height: 100%;
+  margin-top: 10px;
+  padding: 4px;
+  -webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+          box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+}
+
+.results button {
+  background: #EE3EFE;
+  border: 1px solid #110038;
+  -webkit-box-shadow: inset -1px -1px 0 0 #A72CB3, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #A72CB3, inset 1px 1px 0 0 #FFFFFF;
+  color: #ffffff;
+  font-size: 14px;
+  height: 34px;
+  width: 81px;
+}
+
+.results button a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.results button:hover {
+  background: #CE36DB;
+  border: 1px solid #110038;
+  -webkit-box-shadow: inset -1px -1px 0 0 #A72CB3, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #A72CB3, inset 1px 1px 0 0 #FFFFFF;
+}
+
+.resultSearchBar {
+  margin: 10px 0;
+}
+
+.resultSearchBarSection {
+  margin: 20px 0;
+}
+
+.resultSearchBarSection .bar {
+  display: block;
+}
+
+.resultSearchBarSection .gifResultSearch {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.resultSearchBar .gifResultSearch {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.resultSearchBar .gif__card-canva {
+  width: 280px;
+  height: 280px;
+}
+
+.resultSearchBar .gif__card-canva:hover {
+  border: 2px dotted black;
+}
+
+.results__button-close button {
+  background: #EE3EFE;
+  border: 1px solid #110038;
+  -webkit-box-shadow: inset -1px -1px 0 0 #A72CB3, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #A72CB3, inset 1px 1px 0 0 #FFFFFF;
+  color: #ffffff;
+  font-size: 14px;
+  height: 34px;
+  width: 140px;
+}
+
+.results__button-close button:hover {
+  background: #CE36DB;
+  border: 1px solid #110038;
+  -webkit-box-shadow: inset -1px -1px 0 0 #A72CB3, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #A72CB3, inset 1px 1px 0 0 #FFFFFF;
+}
+
+.bar__text {
+  margin: 30px 0 16px 0;
+}
+
+.bar__text-text {
+  width: 100%;
+  height: 32px;
+  background: #FFFAFE;
+  border: 1px solid #2E32FB;
+  -webkit-box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #110038;
+          box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #110038;
+}
+
+.bar__text ::-webkit-input-placeholder {
+  padding: 7px;
+  color: #110038;
+}
+
+.bar__text :-ms-input-placeholder {
+  padding: 7px;
+  color: #110038;
+}
+
+.bar__text ::-ms-input-placeholder {
+  padding: 7px;
+  color: #110038;
+}
+
+.bar__text ::placeholder {
+  padding: 7px;
+  color: #110038;
+}
+
+.gif {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.gif__card {
+  background-color: #E6E6E6;
+  max-width: 288px;
+  width: 100%;
+  max-height: 313px;
+  height: 100%;
+  margin-top: 10px;
+  padding: 4px;
+  -webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+          box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+}
+
+.gif__card-canva img {
+  width: 280px;
+  height: 280px;
+}
+
+.gif__card-canva img:hover {
+  border: 2px dotted black;
+}
+
+.gif__card .canva-button button {
+  background: #2E32FB;
+  border: 1px solid #4C2F99;
+  -webkit-box-shadow: inset -2px -2px 0 0 #2124B3, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -2px -2px 0 0 #2124B3, inset 1px 1px 0 0 #FFFFFF;
+  color: #ffffff;
+  font-size: 14px;
+  height: 34px;
+  width: 81px;
+  position: relative;
+  bottom: 50px;
+  left: 11px;
+}
+
+.gif__card .canva-button button a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.gif__card .canva-button button:hover {
+  background: #2629CC;
+  border: 1px solid #4C2F99;
+  -webkit-box-shadow: inset -1px -1px 0 0 #2124B3, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #2124B3, inset 1px 1px 0 0 #FFFFFF;
+}
+
+.gif__card-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 2px;
+  padding: 0 3px;
+  background-image: -webkit-gradient(linear, right top, left top, from(#EE3EFE), to(#2E32FB));
+  background-image: linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
+}
+
+.gif__card-title p {
+  color: #ffffff;
+  font-size: 14px;
+  margin: 3px 0;
+}
+
+.closeXButton {
+  cursor: pointer;
+}
+
+.trends {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.trends .trend {
+  background-color: #E6E6E6;
+  max-width: 288px;
+  width: 100%;
+  max-height: 290px;
+  height: 100%;
+  margin-top: 10px;
+  padding: 4px;
+  -webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+          box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+}
+
+.trends .trend__img img {
+  width: 280px;
+  height: 280px;
+}
+
+.trends .trend__img img:hover {
+  border: 2px dotted black;
+}
+
+.trends .trend__img:hover ~ .trend__ht,
+.trends .trend .trend__ht:hover {
+  display: block;
+}
+
+.trends .trend__ht {
+  background-image: -webkit-gradient(linear, right top, left top, from(#EE3EFE), to(#2E32FB));
+  background-image: linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
+  color: #ffffff;
+  position: relative;
+  bottom: 30px;
+  margin: 0 3px;
+}
+
+.trends .trend__ht:hover ~ .trend__img img {
+  border: 2px dotted black;
+}
+
+.trends .trend__ht p {
+  margin: 0 5px;
+  font-size: 15px;
+}
+
+/**
+ * 06. FOOTER SECTION
+ *
+ * -------------------------------------------------------------------
+ */
+.footer {
+  background: -webkit-gradient(linear, right top, left top, from(#EE3EFE), to(#2E32FB));
+  background: linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
+  text-align: center;
+  color: #ffffff;
+  padding: 5px 0;
+}
+
+/**
+ * 07. RECORD GIF SECTION
+ *
+ * -------------------------------------------------------------------
+ */
+.gifVideo,
+.gifRecorded {
+  width: 100%;
+  max-width: 800px;
+  height: 100%;
+  margin: auto;
+}
+
+.gifInfo {
+  background: #E6E6E6;
+  -webkit-box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+          box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+  padding: 3px;
+  max-width: 680px;
+  width: 100%;
+  margin: 70px auto;
+}
+
+.gifInfo .gifTitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: -webkit-gradient(linear, right top, left top, from(#EE3EFE), to(#2E32FB));
+  background: linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
+  color: #ffffff;
+  padding: 4px;
+}
+
+.gifInfo .gifTitle__word h3 {
+  font-weight: lighter;
+}
+
+.gifInfo .gifTitle .closeMyGifos {
+  cursor: pointer;
+}
+
+.gifInfo .gifSubtitle {
+  padding: 30px 25px 10px 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.gifInfo .gifSubtitle figure {
+  margin-right: 16px;
+}
+
+.gifInfo .gifSubtitle p {
+  font-size: 16px;
+  color: #110038;
+  letter-spacing: 0;
+  line-height: 22px;
+  font-weight: bold;
+}
+
+.gifInfo .gifInstructions {
+  margin: 0 70px;
+}
+
+.gifInfo .gifInstructions .strongWord {
+  font-style: italic;
+  color: #00001A;
+  letter-spacing: 0;
+  line-height: 20px;
+  font-weight: bold;
+}
+
+.gifInfo .gifInstructions .number {
+  color: #00001A;
+  letter-spacing: 0;
+  line-height: 20px;
+  font-weight: bold;
+}
+
+.gifInfo .gifInstructions p {
+  margin: 20px 0;
+}
+
+.gifInfo .gifButtons {
+  text-align: right;
+  margin: 35px 35px;
+}
+
+.gifInfo .gifButtons button {
+  height: 36px;
+  width: 144px;
+  color: #ffffff;
+  background: #EE3EFE;
+  border: 1px solid #110038;
+  -webkit-box-shadow: inset -1px -1px 0 0 #A72CB3, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #A72CB3, inset 1px 1px 0 0 #FFFFFF;
+}
+
+.gifInfo .gifButtons button:hover {
+  border: 2px dotted black;
+  background: #CE36DB;
+  -webkit-box-shadow: inset -1px -1px 0 0 #A72CB3, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #A72CB3, inset 1px 1px 0 0 #FFFFFF;
+}
+
+.gifInfo .gifButtons .cancel {
+  background-color: #FFF4FD;
+  color: #110038;
+}
+
+.gifInfo .gifButtons .cancel:hover {
+  background-color: #f1e1f0;
+}
+
+.gifInfo .gifButtons .gifButtons__section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin: 20px 0;
+}
+
+.gifInfo .gifButtons .gifButtons__section button {
+  margin-right: 10px;
+}
+
+.gifInfo .gifButtons .gifButtons__section-capture {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.gifInfo .gifButtons .gifButtons__section-capture .captureIcon {
+  width: 36px;
+  margin: 0;
+  padding-top: 4px;
+}
+
+.gifInfo .gifButtons .gifButtons__section-stop {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.gifInfo .gifButtons .gifButtons__section-stop .stop {
+  background: #FF6161;
+  border: 1px solid #110038;
+  -webkit-box-shadow: inset -1px -1px 0 0 #993A3A, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #993A3A, inset 1px 1px 0 0 #FFFFFF;
+  color: #ffffff;
+}
+
+.gifInfo .gifButtons .gifButtons__section-stop .stopIcon {
+  width: 36px;
+  margin: 0;
+  background: #FF6161;
+  border: 1px solid #110038;
+  -webkit-box-shadow: inset -1px -1px 0 0 #993A3A, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #993A3A, inset 1px 1px 0 0 #FFFFFF;
+  padding-top: 4px;
+}
+
+.gifInfo .gifButtons .gifButtons__section .copyGifLink {
+  position: absolute;
+  opacity: 0;
+}
+
+.gifInfo .gifButtons .gifButtons__section a,
+.gifInfo .gifButtons .gifButtons__section .downloadGif {
+  text-decoration: none;
+  background: #F7C9F3;
+  border: 1px solid #110038;
+  -webkit-box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+  font-size: 14px;
+  color: #110038;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.gifInfo .gifButtons .gifButtons__section a:hover,
+.gifInfo .gifButtons .gifButtons__section .downloadGif:hover {
+  border: 2px dotted black;
+  background: #CE36DB;
+  -webkit-box-shadow: inset -1px -1px 0 0 #A72CB3, inset 1px 1px 0 0 #FFFFFF;
+          box-shadow: inset -1px -1px 0 0 #A72CB3, inset 1px 1px 0 0 #FFFFFF;
+}
+
+/**
+ * 08. MEDIA QUERIES
+ *
+ * -------------------------------------------------------------------
+ */
+@media screen and (max-width: 1200px) {
+  .keywordSugestion__buttons button {
+    margin: 1px 8px 1px 22px;
+  }
+  .main {
+    margin: 50px 50px;
+  }
+  .gif {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .search__inputs-button {
+    margin-right: 5px;
+  }
+  .resultSearchBarSection .gifResultSearch {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .gifResultSearch .gif__card-canva {
+    margin: 10px 0;
+  }
+  .results .resultSection .results__cards {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .keywordSugestion__buttons button {
+    margin: 1px 8px 1px 17px;
+  }
+}
+
+@media screen and (max-width: 675px) {
+  .keywordSugestion__buttons button {
+    margin: 1px 8px 1px 22px;
+  }
+  .top-header p {
+    font-size: 0.7em;
+  }
+  .header {
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .header__logo {
+    margin: auto;
+  }
+  .header__buttons {
+    margin: auto;
+  }
+  .search__inputs {
+    display: block;
+    text-align: center;
+  }
+  .search__inputs-button {
+    margin-bottom: 10px;
+  }
+  .gif__card {
+    max-width: 220px;
+  }
+  .gif__card img {
+    width: 100%;
+  }
+  .trends .trend {
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .top-header p {
+    font-size: 0.7em;
+  }
+  .gif {
+    display: block;
+  }
+  .gif__card {
+    margin: auto;
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .top-header p {
+    font-size: 0.6em;
+  }
+  .gif__card {
+    margin: 10px 0;
+  }
+  .gif__card-canva img {
+    width: 100%;
+  }
+  .gifResultSearch .gif__card-canva {
+    margin: 10px 0;
+  }
+  .trends .trend__img {
+    height: auto;
+  }
+  .trends .trend__img img {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=dark-styles.css.map */

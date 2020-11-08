@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gifos | Gifs en un solo solar</title>
+    <link rel="shortcut icon" href="assets/gifOF_logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="sass/styles.css" id="stylesRoute">
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <section class="top-header" id="top-header">
+        <h5>¡Bienvenidos/as a Guifos.com! ----- Donde los gifs están. ///// Número de visitas: <span class="sesions" id="sesions"></span></h5>
+    </section>
+    <section class="main">
+        <h4 class="hide">.</h4>
+        <section class="header">
+            <div class="header__logo">
+                <figure onclick="location.href='index.html'">
+                    <img src="assets/gifOF_logo.png" alt="gifos logo" class="gifos-logo" id="gifos-logo">
+                </figure>
+            </div>
+            <div class="header__buttons">
+                <button class="header__buttons-create" onclick="location.href='gifos.html'">Crear Guifos</button>
+                <button class="header__buttons-choice">Elegir tema</button>
+                <div>
+                    <button class="header__buttons-down"><img src="assets/dropdown.svg" alt="down"></button>
+                    <div class="header__buttons-dropmenu">
+                        <div>
+                            <button class="light" id="light"><span class="mygif-first">S</span>ailor Day</button>
+                        </div>
+                        <div>
+                            <button class="dark" id="dark"><span class="mygif-first">S</span>ailor Night</button>
+                        </div>
+                    </div>
+                </div>
+                <h4 class="header__buttons-mygif"><a href="misgifos.html"><span class="mygif-first">M</span>is Guifos</a></h4>
+            </div>
+        </section>
+        <section class="search">
+            <div class="search__text">
+                <h4><b>Buscar</b></h4>
+            </div>
+            <div class="search__inputs">
+                <input class="search__inputs-text" type="text" name="search" id="inputSearch" placeholder="Busca gifs, hashtags, temas, busca lo que quieras ...">
+                <button onclick="location.href='#resultSearchBar'" class="search__inputs-button" id="buttonSearch"><img src="assets/lupa.svg" alt="lupa"> Buscar</button>
+            </div>
+        </section>
+        <section class="keywordSugestion">
+            <h4 class="hide">.</h4>
+            <div class="keywordSugestion__buttons" id="keywordSugestion__buttons"></div>
+        </section>
+        <section class="keyWords">
+            <h4 class="hide">.</h4>
+            <div class="keyWords__buttons" id="keyWords__buttons"></div>
+        </section>
+        <section class="resultSearchBar" id="resultSearchBar">
+            <h4 class="hide">.</h4>
+        </section>
+        <section class="bar">
+            <h4 class="hide">.</h4>
+            <div class="bar__text">
+                <input class="bar__text-text" type="text" placeholder="Hoy te sugerimos" readonly>
+            </div>
+        </section>
+        <section class="gif" id="gif">
+            <h4 class="hide">.</h4>
+        </section>
+        <section class="results" id="results">
+            <h4 class="hide">.</h4>
+        </section>
+        <section class="bar">
+            <h4 class="hide">.</h4>
+            <div class="bar__text">
+                <input class="bar__text-text" type="text" placeholder="Más Tendencias" readonly>
+            </div>
+        </section>
+        <section class="trends" id="trends">
+            <h4 class="hide">.</h4>
+        </section>
+    </section>
+    <footer class="footer">
+        <p>Todos los derechos reservados | 2020</p>
+    </footer>
+    <script src="main.js"></script>
+</body>
+
+</html>
